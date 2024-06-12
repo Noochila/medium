@@ -2,7 +2,7 @@ import Avatar from 'react-avatar';
 import CustomAppBar from '../Components/AppBar';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import  {useParticularBlog}  from "../hooks/Myblogs";
+import { useParticularBlog } from "../hooks/Myblogs";
 import Loading from '../Components/Loading';
 import axios from 'axios';
 
@@ -29,7 +29,7 @@ const ArticleList = () => {
                 },
             });
             // Refresh the articles after deletion
-            window.location.reload();
+            navigate('/');
         } catch (error) {
             console.error('Failed to delete article:', error);
         }
